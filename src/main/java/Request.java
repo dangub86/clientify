@@ -1,3 +1,3 @@
-public interface Request<R> {
-    
+public class Request {
+    public String myField;
 }

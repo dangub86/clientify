@@ -1,9 +1,9 @@
 
 public interface Client {
 
-    Request createRequest();
+    <R> Client givenRequest(R request);
 
-    Response sendRequest(Request request);
+    <R, E> ResponseWrapper<E> call(RequestWrapper<R> request);
 
-    boolean handleResponse();
+    <E> boolean thenHandleResponse(ResponseWrapper<E> response);
 }

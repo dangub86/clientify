@@ -7,6 +7,9 @@ public class Main {
     }
 
     private static void callSomeService() {
+        Request request = new Request();
+        request.myField = "hello";
+
         ClientBuilder.aWsClient()
                 .givenRequest(request)
                 .configuringPort().mutual()
