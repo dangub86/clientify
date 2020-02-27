@@ -1,3 +1,4 @@
+
 public class RequestWrapper<R> {
     R request;
 
@@ -5,7 +6,14 @@ public class RequestWrapper<R> {
         this.request = request;
     }
 
-    public R getRequest() {
+    public R get() {
         return request;
+    }
+
+    @Override
+    public String toString() {
+        return "RequestWrapper{" +
+                "request=" + request +
+                '}';
     }
 }

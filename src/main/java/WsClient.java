@@ -1,20 +1,32 @@
-public class WsClient implements Client {
-    RequestWrapper requestWrapper = null;
 
-    public <R> WsClient givenRequest(R request) {
-        requestWrapper = new RequestWrapper<R>(request);
+import java.util.function.BiFunction;
+
+public class WsClient<P, R> extends Client {
+    private P port;
+
+    public WsClient() {
+    }
+
+
+    @Override
+    public <P, R, E> Client call(BiFunction<RequestWrapper<E>, P, R> function) {
+
+        System.out.println("Calling the service...");
+        response = function.apply(requestWrapper, (P) port);
+
+        responseWrapper = new ResponseWrapper<>(response);
+        System.out.println("Wrapping the response in ResponseWrapper...");
         return this;
     }
 
-    public <R, E> ResponseWrapper<E> call(RequestWrapper<R> request) {
-        return null;
+
+
+    @Override
+    public WsClient<P, R> configuring(ServiceElement serviceElement) {
+        this.port = (P) serviceElement.get();
+        return this;
     }
 
-    public <E> boolean thenHandleResponse(ResponseWrapper<E> response) {
-        return false;
-    }
 
-    public void configuringPort() {
 
-    }
 }

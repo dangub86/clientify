@@ -1,13 +1,20 @@
-public class RestClient implements Client {
-    public <R> RequestWrapper<R> givenRequest(R request) {
+
+import java.util.function.BiFunction;
+
+public class RestClient extends Client {
+
+    @Override
+    public <P, R, E> Client call(BiFunction<RequestWrapper<E>, P, R> function) {
+        // TODO Auto-generated method stub
         return null;
     }
 
-    public <R, E> ResponseWrapper<E> call(RequestWrapper<R> request) {
+    @Override
+    public Client configuring(ServiceElement serviceElement) {
+        // TODO Auto-generated method stub
         return null;
     }
 
-    public <E> boolean thenHandleResponse(ResponseWrapper<E> response) {
-        return false;
-    }
+
+
 }

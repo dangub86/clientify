@@ -1,3 +1,4 @@
+
 public class ResponseWrapper<E> {
     E response;
 
@@ -5,7 +6,14 @@ public class ResponseWrapper<E> {
         this.response = response;
     }
 
-    public E getResponse() {
+    public E get() {
         return response;
+    }
+
+    @Override
+    public String toString() {
+        return "ResponseWrapper{" +
+                "response=" + response +
+                '}';
     }
 }
