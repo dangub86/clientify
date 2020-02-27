@@ -1,3 +1,4 @@
+package app.pickmaven.clientify.soap;
 
 import java.util.function.BiFunction;
 
@@ -15,7 +16,7 @@ public class WsClient<P, R> extends Client {
         response = function.apply(requestWrapper, (P) port);
 
         responseWrapper = new ResponseWrapper<>(response);
-        System.out.println("Wrapping the response in ResponseWrapper...");
+        System.out.println("Wrapping the response in app.pickmaven.clientify.ResponseWrapper...");
         return this;
     }
 

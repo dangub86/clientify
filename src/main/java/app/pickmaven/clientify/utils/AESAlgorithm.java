@@ -1,3 +1,4 @@
+package app.pickmaven.clientify.utils;
 
 import java.security.spec.KeySpec;
 import java.util.Base64;

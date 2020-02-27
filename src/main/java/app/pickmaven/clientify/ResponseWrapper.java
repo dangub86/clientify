@@ -1,3 +1,4 @@
+package app.pickmaven.clientify;
 
 public class ResponseWrapper<E> {
     E response;
@@ -12,7 +13,7 @@ public class ResponseWrapper<E> {
 
     @Override
     public String toString() {
-        return "ResponseWrapper{" +
+        return "app.pickmaven.clientify.ResponseWrapper{" +
                 "response=" + response +
                 '}';
     }

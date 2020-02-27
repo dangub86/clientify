@@ -1,3 +1,8 @@
+package app.pickmaven.clientify;
+
+import app.pickmaven.clientify.rest.RestClient;
+import app.pickmaven.clientify.soap.WsClient;
+
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
@@ -15,9 +20,9 @@ public abstract class Client {
         return new RestClient();
     }
 
-//    public <R> Client givenRequest(R request) {
+//    public <R> app.pickmaven.clientify.Client givenRequest(R request) {
 //        System.out.println("Given request..." + request);
-//        requestWrapper = new RequestWrapper<R>(request);
+//        requestWrapper = new app.pickmaven.clientify.RequestWrapper<R>(request);
 //        System.out.println("Created requestWrapper..." + requestWrapper);
 //        return this;
 //    }

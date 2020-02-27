@@ -1,3 +1,4 @@
+package app.pickmaven.clientify.soap;
 
 import org.apache.cxf.interceptor.Interceptor;
 import org.apache.cxf.message.Message;

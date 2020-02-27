@@ -1,3 +1,4 @@
+package app.pickmaven.clientify.utils;
 
 import java.util.Objects;
 

@@ -1,3 +1,4 @@
+package app.pickmaven.clientify.utils;
 
 public class PasswordManager
 {

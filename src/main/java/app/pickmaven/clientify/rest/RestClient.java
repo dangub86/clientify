@@ -1,3 +1,4 @@
+package app.pickmaven.clientify.rest;
 
 import java.util.function.BiFunction;
 

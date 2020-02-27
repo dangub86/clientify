@@ -1,3 +1,4 @@
+package app.pickmaven.clientify.soap;
 
 import org.apache.cxf.configuration.jsse.TLSClientParameters;
 import org.apache.cxf.endpoint.Client;
@@ -35,7 +36,7 @@ public class Port<P> implements ServiceElement {
 
     private Port(P port) {
         if (Objects.isNull(port)) {
-            throw new IllegalArgumentException("Port parameter must not be null");
+            throw new IllegalArgumentException("app.pickmaven.clientify.soap.Port parameter must not be null");
         }
         System.out.println("Initializing port object...");
         this.port = port;

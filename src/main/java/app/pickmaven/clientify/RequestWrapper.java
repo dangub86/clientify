@@ -1,3 +1,4 @@
+package app.pickmaven.clientify;
 
 public class RequestWrapper<R> {
     R request;
@@ -12,7 +13,7 @@ public class RequestWrapper<R> {
 
     @Override
     public String toString() {
-        return "RequestWrapper{" +
+        return "app.pickmaven.clientify.RequestWrapper{" +
                 "request=" + request +
                 '}';
     }
